@@ -1,7 +1,5 @@
+// @ts-ignore: CSS module declaration not available in this environment
 import './index.css'
-
-declare module '*.css'
-
 import App from './App'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
