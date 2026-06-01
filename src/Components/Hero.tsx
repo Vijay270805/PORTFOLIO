@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowDown, FiDownload, FiMail, FiGithub, FiLinkedin } from 'react-icons/fi';
-
 const roles = ['AI Engineer', 'Machine Learning Engineer', 'Software Developer', 'Frontend Developer', 'Content Creator'];
-
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayed, setDisplayed] = useState('');
@@ -53,7 +51,7 @@ export default function Hero() {
             >
               <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-6 text-sm text-[var(--primary)]">
                 <span className="w-2 h-2 rounded-full bg-[var(--accent)] animate-pulse" />
-                Open to Work — Chennai, India
+                Open to Software / Tech Roles — Chennai, India
               </div>
 
               <h1 className="font-['Space_Grotesk'] font-bold leading-tight mb-4"
@@ -64,7 +62,7 @@ export default function Hero() {
 
               <div className="flex items-center gap-2 justify-center lg:justify-start mb-6"
                 style={{ fontSize: 'clamp(1.2rem, 3vw, 1.6rem)' }}>
-                <span className="text-[var(--text-secondary)] font-medium">I'm a </span>
+                <span className="text-[var(--text-secondary)] font-medium">A </span>
                 <span className="text-gradient font-bold font-['Space_Grotesk']">
                   {displayed}
                   <span className="animate-blink text-[var(--primary)]">|</span>
@@ -72,9 +70,7 @@ export default function Hero() {
               </div>
 
               <p className="text-[var(--text-secondary)] text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
-                Building Intelligent Systems with AI, Machine Learning & Modern Software Engineering.
-                Passionate about creating intelligent solutions using Machine Learning, Deep Learning,
-                Computer Vision, and Full Stack Development.
+                Where AI meets innovation — building intelligent systems with Machine Learning, Deep Learning, Computer Vision, and Full Stack Engineering.
               </p>
 
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -88,7 +84,7 @@ export default function Hero() {
                   View Projects
                 </motion.button>
                 <motion.a
-                  href="#"
+                  href="./Vijay Resume.pdf"
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}
                   className="btn-outline"
@@ -161,20 +157,21 @@ export default function Hero() {
 
               {/* Profile image container */}
               <div className="absolute inset-4 rounded-full overflow-hidden border-2 border-[var(--primary)] glow-primary bg-gradient-to-br from-[var(--primary)]/20 to-[var(--secondary)]/20 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] flex items-center justify-center mx-auto mb-2">
-                    <span className="text-black font-bold text-4xl font-['Space_Grotesk']">V</span>
-                  </div>
-                  <p className="text-[var(--primary)] font-semibold text-sm">Vijay D</p>
-                  <p className="text-[var(--text-secondary)] text-xs">AI Engineer</p>
+                <div className="text-center w-full h-full">
+                  <img
+                    src={`${import.meta.env.BASE_URL}profile.png`}
+                    alt="Vijay D"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
               {/* Floating tech badges */}
               {[
-                { label: 'Python', pos: 'top-0 right-0', color: 'var(--primary)' },
+                { label: 'Python', pos: 'top-1 right-0', color: 'var(--primary)' },
+                { label: 'AI', pos: 'top-0 left-0', color: 'var(--primary)' },
                 { label: 'ML', pos: 'bottom-8 left-0', color: 'var(--secondary)' },
-                { label: 'React', pos: 'top-1/3 right-[-20px]', color: 'var(--accent)' },
+                { label: 'HTML/CSS', pos: 'bottom-3 right-[-20px]', color: 'var(--accent)' },
               ].map(({ label, pos, color }) => (
                 <motion.div
                   key={label}

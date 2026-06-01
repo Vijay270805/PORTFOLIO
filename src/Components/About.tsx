@@ -5,10 +5,10 @@ import { FiUser, FiMapPin, FiMail, FiPhone, FiAward } from 'react-icons/fi';
 
 const stats = [
   { label: 'CGPA', value: '8.23', icon: '🎓' },
-  { label: 'Projects Completed', value: '10+', icon: '🚀' },
-  { label: 'Certifications', value: '3+', icon: '📜' },
+  { label: 'Projects Completed', value: '3+', icon: '🚀' },
+  { label: 'Online and Offline Certifications', value: '3+', icon: '📜' },
   { label: 'Internship Experience', value: '2', icon: '💼' },
-  { label: 'ML Models Built', value: '15+', icon: '🤖' },
+  { label: 'Tools & Technologies', value: '15+', icon: '🤖' },
 ];
 
 export default function About() {

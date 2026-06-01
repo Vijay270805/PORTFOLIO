@@ -113,12 +113,12 @@ export default function Footer() {
         <div className="border-t border-[var(--border)] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[var(--text-secondary)] text-sm flex items-center gap-1.5">
             © 2026 Vijay D. Made with
-            <FiHeart className="text-red-500 w-3.5 h-3.5 fill-current" />
+            <FiHeart className="text-blue-500 w-3.5 h-3.5 fill-current" />
             in Chennai, India.
           </p>
           <div className="flex items-center gap-4">
             <p className="text-[var(--text-secondary)] text-xs">
-              Built with React + TypeScript + Framer Motion
+            Built For Fun and Learning. Always Open to Feedback and Oppurunities.
             </p>
             <motion.button
               onClick={scrollTop}
