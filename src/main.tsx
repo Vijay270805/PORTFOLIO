@@ -1,13 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-// @ts-ignore: side-effect import of CSS module
 import './index.css'
-import App from './App.tsx'
 
-const rootElement = document.getElementById('root') as HTMLElement
+declare module '*.css'
 
-createRoot(rootElement).render(
-  <StrictMode>
+import App from './App'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
     <App />
-  </StrictMode>,
+  </React.StrictMode>,
 )

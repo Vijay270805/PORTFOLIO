@@ -1,6 +1,10 @@
 import { useState, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
-import { FiGithub, FiExternalLink, FiShield, FiEye } from 'react-icons/fi';
+import {
+  FiGithub,
+  FiShield,
+  FiEye
+} from "react-icons/fi";
 
 const projects = [
   {
@@ -19,7 +23,7 @@ const projects = [
     category: 'ML/AI',
     icon: <FiShield className="w-6 h-6" />,
     color: 'var(--primary)',
-    github: 'https://github.com/vijayd2708',
+    github: 'https://github.com/Vijay270805/SAFEHEX_project',
   },
   {
     id: 2,
@@ -37,7 +41,7 @@ const projects = [
     category: 'Deep Learning',
     icon: <FiEye className="w-6 h-6" />,
     color: 'var(--secondary)',
-    github: 'https://github.com/vijayd2708',
+    github: 'https://github.com/Vijay270805/ROCT-recognition-of-characters-using-Tesseract',
   },
 ];
 
@@ -182,31 +186,30 @@ export default function Projects() {
                   ))}
                 </div>
 
+                
                 {/* Actions */}
-                <div className="flex items-center gap-3 pt-3 border-t border-[var(--border)]">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={e => e.stopPropagation()}
-                    className="flex items-center gap-1.5 text-sm text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors font-medium"
-                  >
-                    <FiGithub className="w-4 h-4" />
-                    GitHub
-                  </a>
-                  <button
-                    onClick={e => { e.stopPropagation(); }}
-                    className="flex items-center gap-1.5 text-sm text-[var(--text-secondary)] hover:text-[var(--secondary)] transition-colors font-medium"
-                  >
-                    <FiExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </button>
-                  <button
-                    className="ml-auto text-xs text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors"
-                  >
-                    {expanded === project.id ? 'Show Less ↑' : 'Show More ↓'}
-                  </button>
-                </div>
+<div className="flex items-center justify-between pt-3 border-t border-[var(--border)]">
+  <a
+    href={project.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={(e) => e.stopPropagation()}
+    className="flex items-center gap-2 text-sm text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors font-medium"
+  >
+    <FiGithub className="w-4 h-4" />
+    View Repository
+  </a>
+
+  <button
+    onClick={(e) => {
+      e.stopPropagation();
+      setExpanded(expanded === project.id ? null : project.id);
+    }}
+    className="text-xs text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors"
+  >
+    {expanded === project.id ? 'Show Less ↑' : 'Show More ↓'}
+  </button>
+</div>
               </motion.div>
             ))}
           </AnimatePresence>
