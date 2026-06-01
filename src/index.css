@@ -1,3 +1,205 @@
+/* @import "tailwindcss";
+  
+@layer base {
+  :root {
+    --primary: #00F5FF;
+    --secondary: #7B61FF;
+    --accent: #14F195;
+    --bg: #050816;
+    --bg-card: rgba(255,255,255,0.03);
+    --bg-card-hover: rgba(255,255,255,0.06);
+    --text-primary: #ffffff;
+    --text-secondary: #a0aec0;
+    --border: rgba(255,255,255,0.08);
+  }
+
+  .light {
+    --primary: #0080FF;
+    --secondary: #6B46FF;
+    --accent: #00C47A;
+    --bg: #f0f4ff;
+    --bg-card: rgba(255,255,255,0.9);
+    --bg-card-hover: rgba(255,255,255,1);
+    --text-primary: #0a0a1a;
+    --text-secondary: #4a5568;
+    --border: rgba(0,0,0,0.1);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: 'Inter', 'Poppins', sans-serif;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+  ::selection { background: var(--primary); color: #000; }
+}
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-accent {
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+  }
+
+  .glass-hover {
+    transition: all 0.3s ease;
+  }
+
+  .glass-hover:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(0, 245, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.08);
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.3), 0 0 60px rgba(0, 245, 255, 0.1);
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #000;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 245, 255, 0.35);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .btn-outline:hover {
+    background: rgba(0, 245, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 245, 255, 0.2);
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    border-color: rgba(0, 245, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 245, 255, 0.05);
+    transform: translateY(-4px);
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.2rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: rgba(0, 245, 255, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(0, 245, 255, 0.2);
+  }
+
+  .nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .nav-link:hover {
+    color: var(--primary);
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .animate-float { animation: float 6s ease-in-out infinite; }
+  .animate-spin-slow { animation: spin-slow 8s linear infinite; }
+  .animate-blink { animation: blink 1s step-end infinite; }
+
+  .section-padding {
+    padding: 5rem 1rem;
+  }
+
+  .container-max {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+ */
 @import "tailwindcss";
 
 @layer base {

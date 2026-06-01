@@ -58,7 +58,7 @@ export default function Hero() {
 
               <h1 className="font-['Space_Grotesk'] font-bold leading-tight mb-4"
                 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', color: 'var(--text-primary)' }}>
-                Hi, I'm{' '}
+                Heyy Hii, I'm{' '}
                 <span className="text-gradient">Vijay D</span>
               </h1>
 

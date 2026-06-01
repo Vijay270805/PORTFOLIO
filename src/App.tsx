@@ -1,19 +1,18 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import Navbar from './Components/Navbar';
-import ParticleBackground from './Components/ParticleBackground';
-import Hero from './Components/Hero';
-import About from './Components/About';
+import LoadingScreen from './components/LoadingScreen';
+import Navbar from './components/Navbar';
+import ParticleBackground from './components/ParticleBackground';
+import Hero from './components/Hero';
+import About from './components/About';
 import Skills from './Components/Skills';
-import Experience from './Components/Experience';
-import Projects from './Components/Projects';
-import Education from './Components/Education';
-import ContentCreator from './Components/ContentCreator';
-import Contact from './Components/Contact';
-import Footer from './Components/Footer';
-import LoadingScreen from './Components/LoadingScreen';
-// @ts-ignore: allow side-effect import of SCSS without type declarations
-import "./App.css";
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Education from './components/Education';
+import ContentCreator from './components/ContentCreator';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
 function App() {
   const [loading, setLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(true);
@@ -39,10 +38,10 @@ function App() {
           <main>
             <Hero />
             <About />
-            <Education />
             <Skills />
             <Experience />
             <Projects />
+            <Education />
             <ContentCreator />
             <Contact />
           </main>
