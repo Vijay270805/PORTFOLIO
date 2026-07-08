@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { FiUser, FiMapPin, FiMail, FiPhone, FiAward } from 'react-icons/fi';
 
 const stats = [
-  { label: 'CGPA', value: '8.23', icon: '🎓' },
+  { label: 'CGPA', value: '8.29', icon: '🎓' },
   { label: 'Projects Completed', value: '3+', icon: '🚀' },
   { label: 'Online and Offline Certifications', value: '3+', icon: '📜' },
   { label: 'Internship Experience', value: '2', icon: '💼' },
